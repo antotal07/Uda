@@ -1,0 +1,338 @@
+/* ===== RESET BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 90px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    background-color: #020263;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-radius: 0 0 8px 8px;
+}
+
+/* ===== TITOLO NAVBAR ===== */
+.nav-title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nav-title h1 {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+}
+
+.nav-title p {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* ===== LINK NAVBAR ===== */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #3a3a3a;
+}
+
+.nav-links a.active {
+    background-color: #0404a3;
+    font-weight: bold;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger-icon {
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px 12px;
+    background: #0404a3;
+    color: white;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.hamburger-icon:hover {
+    background: #0606cc;
+}
+
+.hamburger-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(2, 2, 99, 0.95);
+    padding: 10px 0;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(2, 2, 99, 0.4);
+    z-index: 999;
+}
+
+.hamburger-dropdown a {
+    display: block;
+    padding: 12px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.hamburger-dropdown a:hover {
+    background: rgba(2, 2, 99, 0.4);
+}
+
+/* ===== TITOLI PAGINA ===== */
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #020263;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* ===== TABELLE ===== */
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: 0 auto 10% auto;
+}
+
+td, th {
+    border: 1px solid #160466;
+    padding: 8px;
+}
+
+tr:nth-child(even) { background-color: #f2f2f2; }
+tr:hover { background-color: #ddd; }
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #02086b;
+    color: white;
+}
+
+/* ===== BOTTONE SQUADRA ===== */
+.btn-squadra {
+    background-color: #f2f2f2;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.btn-squadra:hover {
+    background-color: #757575;
+    color: #fff;
+}
+
+/* ===== SORTEGGI BOX ===== */
+.sorteggi-box {
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px 30px 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 153, 255, 0.4);
+    border: 3px solid #02086b;
+    position: relative;
+}
+
+.sorteggi-box h2 {
+    font-size: 30px;
+    color: #020263;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sorteggi-image {
+    position: absolute;
+    top: -20px;
+    left: 10px;
+}
+
+.sorteggi-img {
+    width: 70px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.sorteggi-content h3 {
+    font-size: 22px;
+    color: #020263;
+    margin-top: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sorteggi-content p {
+    font-size: 22px;
+    margin: 5px 0 15px 0;
+    color: #02086b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== TWITCH BOX ===== */
+.twitch-box {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(191, 191, 191, 0.62);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.twitch-img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.twitch-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.twitch-btn {
+    display: inline-block;
+    background-color: #9146FF;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.twitch-btn:hover {
+    background-color: #772ce8;
+}
+
+/* ===== FOTO HEADER ===== */
+.header-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.header-photo img {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== IMMAGINE HOME ===== */
+.home-img {
+    width: 70px;
+    height: auto;
+    border-radius: 12px;
+    margin-right: 80px;
+}
+
+/* ===== BOTTONE ROSE ===== */
+.btn-rose-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.btn-rose-img {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.btn-rose-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    table {
+        width: 95%;
+    }
+
+    .sorteggi-box,
+    .twitch-box {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    body {
+        padding-top: 130px;
+    }
+}
